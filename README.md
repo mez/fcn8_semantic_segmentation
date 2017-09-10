@@ -1,4 +1,5 @@
 # Semantic Segmentation
+![alt text](runs/demo.png)
 
 ### Introduction
 This project labels the pixels of a road in images using a Fully Convolutional Network (FCN).
@@ -21,3 +22,5 @@ Run the following command to run the project:
 python main.py
 ```
 
+## Reflection
+The hyperparameters choosen made the model a bit confident. Higher dropout or regularization would probably produce better result. Also, maybe reducing the batch size.
