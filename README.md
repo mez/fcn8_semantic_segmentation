@@ -64,6 +64,11 @@ batch_size = 1
 EPOCH:     9 | BATCH:   288 | LOSS:   0.069465
 ```
 
+## Hardware Used
+
+* AWS Spot Instance <g3.4xlarge> (NVIDIA Tesla M60 GPU)
+
+
 ## Reflection
 The second run produced sharper results. Looks like increasing the epochs and reducing the batch size did the trick.
 
