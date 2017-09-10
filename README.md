@@ -23,7 +23,7 @@ python main.py
 ```
 
 ## Experiments
-All the Kernals for end of the encoder and decoders where init and regularized with the following values.
+All the Kernals for the end of the encoder, including all decoder layers where init and regularized with the following values.
 
 ```
 k_initializer   = tf.truncated_normal_initializer(stddev=1e-2)
@@ -65,7 +65,7 @@ EPOCH:     9 | BATCH:   288 | LOSS:   0.069465
 ```
 
 ## Reflection
-The second run produced sharper results. Looks like increase the epochs and reducing batch size did the trick.
+The second run produced sharper results. Looks like increasing the epochs and reducing the batch size did the trick.
 
 ## Future Todos
 
