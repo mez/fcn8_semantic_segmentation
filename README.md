@@ -1,5 +1,5 @@
 # Semantic Segmentation
-![alt text](runs/demo.png)
+![alt text](fcn8.png)
 
 ### Introduction
 This project labels the pixels of a road in images using a Fully Convolutional Network (FCN).
@@ -22,5 +22,55 @@ Run the following command to run the project:
 python main.py
 ```
 
+## Experiments
+All the Kernals for end of the encoder and decoders where init and regularized with the following values.
+
+```
+k_initializer   = tf.truncated_normal_initializer(stddev=1e-2)
+k_regularizier  = tf.contrib.layers.l2_regularizer(1e-3)
+```
+Run 1
+
+![alt text](runs/run1.png)
+```
+LEARNING_RATE = 1e-4
+DROPOUT = 0.5
+epochs = 6
+batch_size = 5
+
+LOSS: unrecorded 
+```
+
+Run 2
+
+![alt text](runs/run2.png)
+
+```
+LEARNING_RATE = 1e-4
+DROPOUT = 0.5
+epochs = 10
+batch_size = 1
+
+EPOCH:     9 | BATCH:   288 | LOSS:   0.069465
+```
+
+## Final Hyperparameters
+```
+LEARNING_RATE = 1e-4
+DROPOUT = 0.5
+epochs = 10
+batch_size = 1
+
+EPOCH:     9 | BATCH:   288 | LOSS:   0.069465
+```
+
 ## Reflection
-The hyperparameters choosen made the model a bit confident. Higher dropout or regularization would probably produce better result. Also, maybe reducing the batch size.
+The second run produced sharper results. Looks like increase the epochs and reducing batch size did the trick.
+
+## Future Todos
+
+* Tackle more labels
+* Implement a different encoder model, maybe SqueezeNet?!
+* Look into SegNet
+* Train on the Cityscapes dataset
+* Instance Segmentation
