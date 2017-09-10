@@ -1,4 +1,5 @@
-# Semantic Segmentation
+# Semantic Segmentation using FCN8 model
+
 ![alt text](fcn8.png)
 
 ### Introduction
